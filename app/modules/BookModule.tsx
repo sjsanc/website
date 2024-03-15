@@ -55,10 +55,7 @@ export default async function BookModule() {
           </div>
         </a>
       ) : (
-        <div
-          style={{ height: 250, width: 250 }}
-          className="flex items-center justify-center text-zinc-600 bg-zinc-900 rounded mb-2"
-        >
+        <div className="flex items-center justify-center w-full aspect-square text-zinc-600 bg-zinc-900 rounded mb-2">
           <BooksIcon />
         </div>
       )}

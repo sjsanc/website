@@ -95,10 +95,7 @@ export default async function SpotifyModule() {
             className="rounded-lg overflow-hidden mb-2 drop-shadow"
           />
         ) : (
-          <div
-            style={{ height: 250, width: 250 }}
-            className="flex items-center justify-center text-zinc-600 bg-zinc-900 rounded mb-2"
-          >
+          <div className="flex items-center aspect-square w-full justify-center text-zinc-600 bg-zinc-900 rounded mb-2">
             <HeadphonesIcon />
           </div>
         )}
