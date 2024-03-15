@@ -2,8 +2,6 @@ import { loadEnvConfig } from "@next/env";
 loadEnvConfig(".");
 
 const getRefreshToken = async (code: string) => {
-  console.log(`CODE: ${code}`);
-
   const clientId = process.env.SPOTIFY_CLIENT_ID;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
   const redirectUri = process.env.SPOTIFY_REDIRECT_URI;
@@ -13,8 +11,6 @@ const getRefreshToken = async (code: string) => {
       "Unable to generate refresh token due to missing env variable"
     );
   }
-
-  console.log(clientId, clientSecret, redirectUri);
 
   const params = new URLSearchParams();
   params.append("client_id", clientId);
@@ -28,8 +24,6 @@ const getRefreshToken = async (code: string) => {
       method: "POST",
       body: params,
     });
-
-    console.log(response);
 
     const data = await response.json();
 

@@ -45,7 +45,7 @@ const Block = forwardRef<HTMLDivElement, BlockProps>(
         animate={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 0.8, ease: "anticipate" }}
         ref={ref}
-        className={"relative text-white break-inside-avoid mb-2"}
+        className={"relative text-white break-inside-avoid mb-2 max-w-[250px]"}
       >
         <div
           {...props}
